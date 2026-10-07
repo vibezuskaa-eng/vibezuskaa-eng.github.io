@@ -1,5 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 .button {
   display: flex;
-  gap: 2px;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
+
+  width: auto;
+  min-width: 150px;
+  height: 50px;
+
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+
+  align-self: center;
+
+  padding: 15px 25px;
+
+  background: #43a047;
+  color: white;
+
+  border: none;
+
+  clip-path: polygon(
+    8px 0,
+    calc(100% - 8px) 0,
+    calc(100% - 8px) 4px,
+    100% 4px,
+    100% calc(100% - 8px),
+    calc(100% - 4px) calc(100% - 8px),
+    calc(100% - 4px) 100%,
+    8px 100%,
+    8px calc(100% - 4px),
+    0 calc(100% - 4px),
+    0 8px,
+    4px 8px,
+    4px 4px,
+    8px 4px
+  );
+}
+#nome {
+  display: flex;
+  font-family: "Press Start 2P", monospace;
+  font-size: 20px;
+  width: auto;
+  min-width: 150px;
+  height: 50px;
+  line-height: 5.5;
 }
