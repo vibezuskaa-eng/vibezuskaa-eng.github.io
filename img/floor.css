@@ -5,6 +5,11 @@
   --grama-4: #1b5e20;
   --grama-5: #4caf50;
   --grama-6: #33691e;
+
+  --terra-1: #79502d;
+  --terra-2: #8d6038;
+  --terra-3: #634126;
+  --terra-4: #a47545;
 }
 body {
   overflow: hidden;
@@ -23,4 +28,9 @@ body {
 .floor_green {
   width: 10px;
   height: 10px;
+}
+.floor_dirt {
+  width: 40px;
+  height: 40px;
+  background-color: var(--terra-1);
 }
