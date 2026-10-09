@@ -1,0 +1,22 @@
+.floor {
+  background-image: url(img/floor.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  bottom: 0px;
+  left: -5px;
+  width: 105%;
+  height: 60vh;
+}
+.background {
+  background-image: url(img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  bottom: 190px;
+  left: -5px;
+  width: 105%;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.8;
+}
