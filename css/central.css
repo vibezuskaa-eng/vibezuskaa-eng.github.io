@@ -5,4 +5,5 @@
 .floor,
 .background {
   pointer-events: none;
+  user-select: none;
 }

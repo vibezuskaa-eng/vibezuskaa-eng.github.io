@@ -24,3 +24,15 @@
     transform: translate(-30px, 40px);
   }
 }
+
+#fox {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  left: 100px;
+  bottom: 0;
+  background: #e87832;
+  border: 3px solid #713c20;
+  box-sizing: border-box;
+  z-index: 10;
+}

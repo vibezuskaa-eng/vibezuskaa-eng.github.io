@@ -121,40 +121,65 @@
 }
 
 #carreira {
-  font-family: "Press Start 2P", monospace;
-  font-size: clamp(9px, 1.1vw, 12px);
-  line-height: 2;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 
-  color: #d7f5d8;
-  text-align: center;
-  letter-spacing: 1px;
+  width: fit-content;
+  max-width: 90%;
+  box-sizing: border-box;
 
   margin: 0 auto 30px;
   padding: 8px 12px;
 
-  width: fit-content;
-  max-width: 90%;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(9px, 1.1vw, 12px);
+  line-height: 2;
+  letter-spacing: 1px;
 
+  color: #d7f5d8;
   background: rgba(14, 35, 23, 0.75);
   border-left: 4px solid #43a047;
   border-right: 4px solid #43a047;
 
   text-shadow: 2px 2px 0 #163d25;
-
-  z-index: 1;
-
   user-select: none;
 }
 
+.cargo {
+  white-space: nowrap;
+}
+
+.python-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.python-logo img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
 @media (max-width: 600px) {
-  #nome {
-    max-width: 95%;
-    font-size: 13px;
-    margin-top: 25px;
+  #carreira {
+    gap: 8px;
+    padding: 8px;
+    font-size: 8px;
+    letter-spacing: 0;
   }
 
-  #carreira {
-    font-size: 9px;
-    letter-spacing: 0;
+  .python-logo {
+    gap: 3px;
+  }
+
+  .python-logo img {
+    width: 18px;
+    height: 18px;
   }
 }
