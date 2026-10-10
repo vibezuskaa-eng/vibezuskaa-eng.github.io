@@ -1,0 +1,152 @@
+/* =========================
+   RAPOSA — ÁREA PRINCIPAL
+========================= */
+
+#fox {
+  position: fixed;
+  width: 76px;
+  height: 48px;
+  z-index: 10;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+/* =========================
+   CORPO
+========================= */
+
+.fox-body {
+  position: absolute;
+  left: 8px;
+  bottom: 10px;
+  width: 48px;
+  height: 20px;
+  background: #d97832;
+  box-shadow:
+    0 -4px #d97832,
+    4px -8px #d97832,
+    12px -8px #d97832;
+}
+
+/* Costas */
+.fox-back {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 28px;
+  height: 4px;
+  background: #ed994c;
+}
+
+/* Barriga */
+.fox-belly {
+  position: absolute;
+  left: 12px;
+  bottom: 0;
+  width: 28px;
+  height: 6px;
+  background: #f4d6a0;
+}
+
+/* =========================
+   PATAS
+========================= */
+
+.fox-leg {
+  position: absolute;
+  bottom: -10px;
+  width: 8px;
+  height: 10px;
+  background: #a94f24;
+}
+
+.fox-leg-back {
+  left: 8px;
+}
+
+.fox-leg-front {
+  right: 8px;
+}
+
+/* =========================
+   CABEÇA
+========================= */
+
+.fox-head {
+  position: absolute;
+  left: 42px;
+  bottom: 26px;
+  width: 22px;
+  height: 20px;
+  background: #d97832;
+  box-shadow:
+    4px -4px #d97832,
+    8px -4px #d97832;
+}
+
+/* =========================
+   ORELHAS
+========================= */
+
+.fox-ear {
+  position: absolute;
+  top: -10px;
+  width: 8px;
+  height: 10px;
+  background: #d97832;
+}
+
+.fox-ear::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  width: 4px;
+  height: 4px;
+  background: #713c20;
+}
+
+.fox-ear-back {
+  left: 2px;
+}
+
+.fox-ear-front {
+  left: 14px;
+}
+
+/* =========================
+   FOCINHO
+   Sem bloco abaixo da cabeça
+========================= */
+
+.fox-muzzle {
+  position: absolute;
+  right: -5px;
+  bottom: 4px;
+  width: 8px;
+  height: 4px;
+  background: #f4d6a0;
+}
+
+/* Nariz */
+.fox-nose {
+  position: absolute;
+  right: -9px;
+  bottom: 5px;
+  width: 4px;
+  height: 4px;
+  background: #20180f;
+}
+
+/* =========================
+   OLHO
+========================= */
+
+.fox-eye {
+  position: absolute;
+  right: 3px;
+  top: 6px;
+  width: 4px;
+  height: 4px;
+  background: #20180f;
+}
