@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+#buttons {
+  position: relative;
+  z-index: 20;
+}
+
 .button {
+  position: relative;
+  z-index: 21;
+  pointer-events: auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,6 +116,8 @@
   text-align: center;
 
   z-index: 1;
+
+  user-select: none;
 }
 
 #carreira {
@@ -129,6 +140,10 @@
   border-right: 4px solid #43a047;
 
   text-shadow: 2px 2px 0 #163d25;
+
+  z-index: 1;
+
+  user-select: none;
 }
 
 @media (max-width: 600px) {

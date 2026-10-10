@@ -20,3 +20,17 @@ for (let i = 0; i < quantidade; i++) {
 
   cloud.appendChild(nuvem);
 }
+const particulas = 40;
+
+for (let i = 0; i < particulas; i++) {
+  const bolinha = document.createElement("div");
+  bolinha.classList.add("particula");
+
+  bolinha.style.left = Math.random() * 100 + "vw";
+  bolinha.style.top = Math.random() * 100 + "vh";
+
+  bolinha.style.animationDuration = 5 + Math.random() * 10 + "s";
+  bolinha.style.animationDelay = -Math.random() * 10 + "s";
+
+  document.body.appendChild(bolinha);
+}

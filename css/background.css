@@ -3,9 +3,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
-  bottom: 0px;
+  bottom: -30px;
   left: -5px;
-  width: 105%;
+  width: 101%;
   height: 60vh;
 }
 .background {
@@ -13,7 +13,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
-  bottom: 190px;
+  bottom: 180px;
   left: -5px;
   width: 105%;
   height: 100vh;

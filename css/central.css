@@ -1,1 +1,8 @@
 @import url(background.css);
+@import url(animals.css);
+.cloud,
+.particula,
+.floor,
+.background {
+  pointer-events: none;
+}
