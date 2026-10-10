@@ -1,3 +1,3 @@
 import "./background.js";
 import "./plant.js";
-import "./animals/fox.js";
+import "./animals/central.js";
