@@ -1,44 +1,76 @@
-Vinícius Rodrigues de Moraes | Página Pessoal
+🌐 [English](README.md) | Português
 
-Site pessoal com meu perfil, portfólio, projetos e cursos. Feito com HTML e CSS, hospedado no GitHub Pages.
+# Portfolio | Vinicius Rodrigues de Moraes
 
-🔗 Acesse o site: vibezuskaa-eng.github.io
+Personal portfolio website, hosted on GitHub Pages.
 
-📌 Sobre
+🔗 https://vibezuskaa-eng.github.io/
 
-Sou desenvolvedor front-end e estou evoluindo em Python, com foco em automação. Este site reúne o que eu faço e onde me encontrar.
+## About
 
-🧭 Seções do site
-Seção O que tem
-Início Apresentação
-Perfis Links para minhas redes profissionais
-Portfólio Trabalhos realizados
-Projetos Projetos em andamento e concluídos
-Cursos Estudos e formações
-Contato Como falar comigo
-🛠️ Tecnologias
-HTML5 (incluindo a Popover API para os menus)
-CSS3
-GitHub Pages para hospedagem
-📂 Estrutura do repositório
-.
-├── index.html
-├── css/
-├── img/
-└── README.md
+Software developer focused on Python and automation. This website brings together my profile, portfolio, projects, courses and contact information.
 
-Ajuste esta estrutura para os arquivos que existem de fato no repositório.
+## Site Sections
 
-🚀 Como rodar localmente
-Clone o repositório:
-bash
-git clone https://github.com/vibezuskaa-eng/vibezuskaa-eng.github.io.git
-Abra o arquivo index.html no navegador.
+- **Início (Home)**: introduction
+- **Perfis (Profiles)**: where to find me online
+- **Portifólio (Portfolio)**: work and results
+- **Projetos (Projects)**: projects I have built
+- **Cursos (Courses)**: education and completed courses
+- **Contato (Contact)**: how to reach me
 
-Não precisa instalar nada.
+## Tech Stack
 
-📫 Contato
-LinkedIn: Vinícius Rodrigues de Moraes
-GitHub: @vibezuskaa-eng
+- HTML
+- CSS
+- GitHub Pages (hosting)
 
-Feito por Vinícius Rodrigues de Moraes.
+## Running Locally
+
+1. Download or clone this repository.
+2. Open the `index.html` file in your browser.
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/vinicius-rodrigues-de-m-028b14343/
+- GitHub: https://github.com/vibezuskaa-eng
+
+<details>
+<summary>🇧🇷 Ler em português</summary>
+
+# Portfólio | Vinicius Rodrigues de Moraes
+
+Site pessoal de portfólio, hospedado no GitHub Pages.
+
+🔗 https://vibezuskaa-eng.github.io/
+
+## Sobre
+
+Desenvolvedor de software com foco em Python e automação. Este site reúne meu perfil, portfólio, projetos, cursos e formas de contato.
+
+## Seções do site
+
+- **Início**: apresentação
+- **Perfis**: onde me encontrar online
+- **Portfólio**: trabalhos e resultados
+- **Projetos**: projetos que desenvolvi
+- **Cursos**: formação e cursos realizados
+- **Contato**: como falar comigo
+
+## Tecnologias
+
+- HTML
+- CSS
+- GitHub Pages (hospedagem)
+
+## Como rodar localmente
+
+1. Baixe ou clone este repositório.
+2. Abra o arquivo `index.html` no navegador.
+
+## Contato
+
+- LinkedIn: https://www.linkedin.com/in/vinicius-rodrigues-de-m-028b14343/
+- GitHub: https://github.com/vibezuskaa-eng
+
+</details>
