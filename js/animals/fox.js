@@ -23,13 +23,11 @@ fox.innerHTML = `
   </div>
 `;
 
-
 // =========================
 // ELEMENTO DO CHÃO
 // =========================
 
 const floor = document.getElementById("floor");
-
 
 // =========================
 // CONFIGURAÇÃO DO MOVIMENTO
@@ -41,11 +39,11 @@ let y = 0;
 let velocidadeY = 0;
 let direcao = 1;
 let velocidade = 1.5;
+let velocidadePuloX = 0;
 
 let acao = "andar";
 let proximaAcao = Date.now() + 2000;
 let ultimoTempo = performance.now();
-
 
 // =========================
 // POSIÇÃO DO CHÃO
@@ -53,11 +51,10 @@ let ultimoTempo = performance.now();
 
 function calcularPiso() {
   const topoChao = floor.getBoundingClientRect().top;
-  const ajusteChao = window.innerWidth <= 768 ? -227 : -270;
+  const ajusteChao = window.innerWidth <= 768 ? -213 : -255;
 
   return window.innerHeight - topoChao - fox.offsetHeight + ajusteChao;
 }
-
 
 // =========================
 // ESCOLHER AÇÃO
@@ -77,9 +74,9 @@ function escolherAcao(piso) {
 
   if (acao === "pular" && noChao) {
     velocidadeY = 9;
+    velocidadePuloX = direcao * (2 + Math.random() * 2);
   }
 }
-
 
 // =========================
 // ATUALIZAR MOVIMENTO
@@ -97,9 +94,13 @@ function atualizar(agora) {
     escolherAcao(piso);
   }
 
-  // Andar
+  // Andar ou avançar durante o pulo
   if (acao === "andar") {
     x += direcao * velocidade * fator;
+  }
+
+  if (velocidadeY > 0 || y > piso) {
+    x += velocidadePuloX * fator;
   }
 
   // Pular e cair
@@ -114,6 +115,7 @@ function atualizar(agora) {
   if (y <= piso && velocidadeY <= 0) {
     y = piso;
     velocidadeY = 0;
+    velocidadePuloX = 0;
   }
 
   // Limites da tela
@@ -131,13 +133,10 @@ function atualizar(agora) {
   fox.style.left = `${x}px`;
   fox.style.bottom = `${y}px`;
 
-  fox.style.transform = direcao < 0
-    ? "scaleX(-1)"
-    : "scaleX(1)";
+  fox.style.transform = direcao < 0 ? "scaleX(-1)" : "scaleX(1)";
 
   requestAnimationFrame(atualizar);
 }
-
 
 // =========================
 // INICIAR RAPOSA
