@@ -23,7 +23,6 @@ fox.innerHTML = `
   </div>
 `;
 
-
 const floor = document.getElementById("floor");
 
 let x = 100;
@@ -38,10 +37,9 @@ let acao = "andar";
 let proximaAcao = Date.now() + 2000;
 let ultimoTempo = performance.now();
 
-
 function calcularPiso() {
   const topoChao = floor.getBoundingClientRect().top;
-  return window.innerHeight - topoChao - fox.offsetHeight;
+  return window.innerHeight - topoChao - fox.offsetHeight - 48;
 }
 
 function escolherAcao(piso) {
