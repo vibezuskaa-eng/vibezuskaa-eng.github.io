@@ -1,61 +1,25 @@
 #fox {
   position: fixed;
   left: 0;
-  bottom: 60px;
-
-  display: block;
-  width: 100px;
-  height: auto;
-
-  z-index: 10;
+  bottom: 140px;
+  width: 200px;
+  height: 200px;
+  z-index: 20;
   pointer-events: none;
   user-select: none;
   object-fit: contain;
   image-rendering: pixelated;
-
-  animation: raposa-andando 18s linear infinite alternate;
+  display: none;
 }
 
-@keyframes raposa-andando {
-  0% {
-    left: 0;
-    transform: scaleX(1);
-  }
-
-  49.9% {
-    transform: scaleX(1);
-  }
-
-  50% {
-    transform: scaleX(-1);
-  }
-
-  100% {
-    left: calc(100% - 100px);
-    transform: scaleX(-1);
-  }
-}
-
-@media (max-width: 600px) {
+@media (min-width: 1024px) and (pointer: fine) {
   #fox {
-    width: 76px;
-    bottom: 40px;
+    display: block;
   }
+}
 
-  @keyframes raposa-andando {
-    0% {
-      left: 0;
-      transform: scaleX(1);
-    }
-    49.9% {
-      transform: scaleX(1);
-    }
-    50% {
-      transform: scaleX(-1);
-    }
-    100% {
-      left: calc(100% - 76px);
-      transform: scaleX(-1);
-    }
+@media (max-width: 1023px), (pointer: coarse) {
+  #fox {
+    display: none !important;
   }
 }
