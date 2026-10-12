@@ -1,154 +1,61 @@
-/* =========================
-   RAPOSA — ÁREA PRINCIPAL
-========================= */
-
 #fox {
   position: fixed;
-  width: 76px;
-  height: 48px;
   left: 0;
-  bottom: 0;
+  bottom: 60px;
+
+  display: block;
+  width: 100px;
+  height: auto;
+
   z-index: 10;
   pointer-events: none;
+  user-select: none;
+  object-fit: contain;
   image-rendering: pixelated;
+
+  animation: raposa-andando 18s linear infinite alternate;
 }
 
-/* =========================
-   CORPO
-========================= */
+@keyframes raposa-andando {
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
 
-.fox-body {
-  position: absolute;
-  left: 8px;
-  bottom: 10px;
-  width: 48px;
-  height: 20px;
-  background: #d97832;
-  box-shadow:
-    0 -4px #d97832,
-    4px -8px #d97832,
-    12px -8px #d97832;
+  49.9% {
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(-1);
+  }
+
+  100% {
+    left: calc(100% - 100px);
+    transform: scaleX(-1);
+  }
 }
 
-/* Costas */
-.fox-back {
-  position: absolute;
-  top: 0;
-  left: 12px;
-  width: 28px;
-  height: 4px;
-  background: #ed994c;
-}
+@media (max-width: 600px) {
+  #fox {
+    width: 76px;
+    bottom: 40px;
+  }
 
-/* Barriga */
-.fox-belly {
-  position: absolute;
-  left: 12px;
-  bottom: 0;
-  width: 28px;
-  height: 6px;
-  background: #f4d6a0;
-}
-
-/* =========================
-   PATAS
-========================= */
-
-.fox-leg {
-  position: absolute;
-  bottom: -10px;
-  width: 8px;
-  height: 10px;
-  background: #a94f24;
-}
-
-.fox-leg-back {
-  left: 8px;
-}
-
-.fox-leg-front {
-  right: 8px;
-}
-
-/* =========================
-   CABEÇA
-========================= */
-
-.fox-head {
-  position: absolute;
-  left: 42px;
-  bottom: 26px;
-  width: 22px;
-  height: 20px;
-  background: #d97832;
-  box-shadow:
-    4px -4px #d97832,
-    8px -4px #d97832;
-}
-
-/* =========================
-   ORELHAS
-========================= */
-
-.fox-ear {
-  position: absolute;
-  top: -10px;
-  width: 8px;
-  height: 10px;
-  background: #d97832;
-}
-
-.fox-ear::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 2px;
-  width: 4px;
-  height: 4px;
-  background: #713c20;
-}
-
-.fox-ear-back {
-  left: 2px;
-}
-
-.fox-ear-front {
-  left: 14px;
-}
-
-/* =========================
-   FOCINHO
-   Sem bloco abaixo da cabeça
-========================= */
-
-.fox-muzzle {
-  position: absolute;
-  right: -5px;
-  bottom: 4px;
-  width: 8px;
-  height: 4px;
-  background: #f4d6a0;
-}
-
-/* Nariz */
-.fox-nose {
-  position: absolute;
-  right: -9px;
-  bottom: 5px;
-  width: 4px;
-  height: 4px;
-  background: #20180f;
-}
-
-/* =========================
-   OLHO
-========================= */
-
-.fox-eye {
-  position: absolute;
-  right: 3px;
-  top: 6px;
-  width: 4px;
-  height: 4px;
-  background: #20180f;
+  @keyframes raposa-andando {
+    0% {
+      left: 0;
+      transform: scaleX(1);
+    }
+    49.9% {
+      transform: scaleX(1);
+    }
+    50% {
+      transform: scaleX(-1);
+    }
+    100% {
+      left: calc(100% - 76px);
+      transform: scaleX(-1);
+    }
+  }
 }
