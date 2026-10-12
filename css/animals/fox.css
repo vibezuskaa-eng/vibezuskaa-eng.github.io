@@ -6,6 +6,8 @@
   position: fixed;
   width: 76px;
   height: 48px;
+  left: 0;
+  bottom: 0;
   z-index: 10;
   pointer-events: none;
   image-rendering: pixelated;
