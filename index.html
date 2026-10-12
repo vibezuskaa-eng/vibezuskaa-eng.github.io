@@ -1,49 +1,96 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/central.css"/>
-    <link rel="stylesheet" href="index.css">
+
+    <meta
+      name="description"
+      content="Vinicius Rodrigues de Moraes — desenvolvedor de software com foco em Python, análise de dados e automação."
+    />
+
+    <title>Vinicius Rodrigues de Moraes | Desenvolvedor</title>
+
+    <link rel="stylesheet" href="css/central.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
+
   <body>
-    <div>
+    <header class="perfil-header">
       <h1 id="nome">Vinicius Rodrigues de Moraes</h1>
+
       <h2 id="carreira">
-  <span class="cargo">Software developer |</span>
+        <span class="cargo">Software Developer |</span>
 
-  <span class="python-logo">
-    <img
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-      alt="Python"
-    >
-    <span>Python</span>
-  </span>
-</h2>
-    </div>
-   <div class="button-frame">
-        <button  class="button">Inicio</button>
-        <button  class="button"popovertarget="dados_perfil">Perfis</button></li>
-        <button  class="button">Portifolio</button>
-        <button  class="button">Projetos</button>
-        <button  class="button">Cursos</button>
-        <button  class="button">Contato</button>
-</div>
+        <span class="python-logo">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+            alt="Logo Python"
+          />
+          <span>Python</span>
+        </span>
+      </h2>
+    </header>
 
-    <div id="dados_perfil" popover="auto">
-      <a href="https://www.linkedin.com/in/vinicius-rodrigues-de-moraes/"
-        >https://www.linkedin.com/in/vinicius-rodrigues-de-moraes/</a
+    <nav class="button-frame" aria-label="Navegação principal">
+      <button class="button" type="button">Início</button>
+      <button class="button" type="button" popovertarget="dados_perfil">
+        Perfis
+      </button>
+      <button class="button" type="button">Portfólio</button>
+      <button class="button" type="button">Projetos</button>
+      <button class="button" type="button">Cursos</button>
+      <button class="button" type="button" popovertarget="dados_contato">
+        Contato
+      </button>
+    </nav>
+
+    <section id="dados_perfil" popover>
+      <h3>Meus perfis</h3>
+
+      <a
+        href="https://www.linkedin.com/in/vinicius-rodrigues-de-moraes/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-    </div>
+        LinkedIn
+        <span>Perfil profissional</span>
+      </a>
+
+      <a
+        href="https://vibezuskaa-eng.github.io/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Portfólio
+        <span>Projetos e apresentação</span>
+      </a>
+    </section>
+
+    <section id="dados_contato" popover>
+      <h3>Entre em contato</h3>
+
+      <a href="mailto:vibezuskaa@gmail.com">
+        E-mail
+        <span>vibezuskaa@gmail.com</span>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/vinicius-rodrigues-de-moraes/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+        <span>Enviar mensagem profissional</span>
+      </a>
+    </section>
+
     <div class="floor" id="floor"></div>
     <div class="background" id="background"></div>
-    <div class="cloud" id ="cloud"></div> 
+    <div class="cloud" id="cloud"></div>
+    <div id="arvore"></div>
     <div id="fox"></div>
 
-
-<script type="module" src="js/central.js"></script>
-<script type="module" src="js/animals/central_animals.js"></script>
-
+    <script type="module" src="js/central.js"></script>
   </body>
 </html>
