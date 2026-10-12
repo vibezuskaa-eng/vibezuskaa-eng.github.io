@@ -23,15 +23,8 @@ fox.innerHTML = `
   </div>
 `;
 
-// =========================
-// ELEMENTO DO CHÃO
-// =========================
 
 const floor = document.getElementById("floor");
-
-// =========================
-// CONFIGURAÇÃO DO MOVIMENTO
-// =========================
 
 let x = 100;
 let y = 0;
@@ -45,21 +38,12 @@ let acao = "andar";
 let proximaAcao = Date.now() + 2000;
 let ultimoTempo = performance.now();
 
-// =========================
-// POSIÇÃO DO CHÃO
-// =========================
-
 function calcularPiso() {
   const topoChao = floor.getBoundingClientRect().top;
   const ajusteChao = window.innerWidth <= 768 ? -213 : -255;
 
   return window.innerHeight - topoChao - fox.offsetHeight + ajusteChao;
 }
-
-// =========================
-// ESCOLHER AÇÃO
-// =========================
-
 function escolherAcao(piso) {
   const acoes = ["andar", "andar", "parado", "pular"];
 
@@ -77,10 +61,6 @@ function escolherAcao(piso) {
     velocidadePuloX = direcao * (2 + Math.random() * 2);
   }
 }
-
-// =========================
-// ATUALIZAR MOVIMENTO
-// =========================
 
 function atualizar(agora) {
   const dt = Math.min(agora - ultimoTempo, 50);
