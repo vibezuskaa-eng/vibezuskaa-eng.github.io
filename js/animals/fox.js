@@ -37,10 +37,14 @@ let acao = "andar";
 let proximaAcao = Date.now() + 2000;
 let ultimoTempo = performance.now();
 
+
 function calcularPiso() {
-  const topoChao = floor.getBoundingClientRect().top;
-  return window.innerHeight - topoChao - fox.offsetHeight - 48;
+  const chao = floor.getBoundingClientRect();
+  const alturaRaposa = fox.offsetHeight;
+
+  return window.innerHeight - chao.bottom - alturaRaposa;
 }
+
 
 function escolherAcao(piso) {
   const acoes = ["andar", "andar", "parado", "pular"];
