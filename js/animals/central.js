@@ -1,1 +1,1 @@
-import "./animals/fox.js";
+import "./fox.js";
