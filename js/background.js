@@ -24,15 +24,32 @@ for (let i = 0; i < quantidade; i++) {
 
 const particulas = 40;
 
-for (let i = 0; i < particulas; i++) {
-  const bolinha = document.createElement("div");
-  bolinha.classList.add("particula");
+function criarParticulas() {
+  document.querySelectorAll(".particula").forEach((p) => p.remove());
 
-  bolinha.style.left = Math.random() * 100 + "vw";
-  bolinha.style.top = Math.random() * 100 + "vh";
+  const limiteChao = window.innerHeight * 0.65;
 
-  bolinha.style.animationDuration = 5 + Math.random() * 10 + "s";
-  bolinha.style.animationDelay = -Math.random() * 10 + "s";
+  for (let i = 0; i < particulas; i++) {
+    const bolinha = document.createElement("div");
+    bolinha.classList.add("particula");
 
-  document.body.appendChild(bolinha);
+    bolinha.style.left = Math.random() * 100 + "vw";
+    bolinha.style.top = Math.random() * limiteChao + "px";
+
+    bolinha.style.animationDuration = 5 + Math.random() * 10 + "s";
+    bolinha.style.animationDelay = -Math.random() * 10 + "s";
+
+    document.body.appendChild(bolinha);
+  }
 }
+
+criarParticulas();
+window.addEventListener("resize", criarParticulas);
+
+function atualizarTema() {
+  const hora = new Date().getHours();
+  document.body.classList.toggle("noite", hora >= 18 || hora < 6);
+}
+
+atualizarTema();
+setInterval(atualizarTema, 60_000);

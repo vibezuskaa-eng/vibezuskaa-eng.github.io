@@ -9,9 +9,10 @@
   height: 60vh;
 }
 .background {
-  background-image: url(img/background.png);
+  background-image: url("img/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: fixed;
   bottom: 155px;
   left: -5px;
@@ -19,6 +20,10 @@
   height: 100vh;
   z-index: -1;
   opacity: 0.8;
+}
+
+body.noite .background {
+  background-image: url("img/background2.png");
 }
 .cloud {
   position: fixed;
@@ -77,9 +82,9 @@
 }
 .particula {
   position: fixed;
-  width: 3px;
-  height: 3px;
-  background: white;
+  width: 6px;
+  height: 6px;
+  background: rgb(251, 255, 0);
   border-radius: 50%;
 
   pointer-events: none;
@@ -99,5 +104,48 @@
 
   100% {
     transform: translate(-30px, 40px);
+  }
+}
+
+body,
+.background,
+.floor {
+  transition:
+    background-color 1.5s ease,
+    filter 1.5s ease;
+}
+
+body.noite {
+  background-color: #061126;
+}
+
+body.noite .background {
+  filter: brightness(0.38) saturate(0.8);
+}
+
+body.noite .floor {
+  filter: brightness(0.55) saturate(0.85);
+}
+
+body.noite #nome,
+body.noite #carreira {
+  color: #e1edff;
+}
+
+body.noite .button {
+  background: #10243a;
+  box-shadow: inset 0 0 0 4px #123c5c;
+  text-shadow: 2px 2px 0 #071b30;
+}
+
+body.noite .button-frame {
+  background: #071b30;
+}
+
+/* Acessibilidade */
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
   }
 }
